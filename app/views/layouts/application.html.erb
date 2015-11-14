@@ -1,14 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title>James:potz | Web Developer, Web Designer</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-touch-icon-57x57.png?v=3">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-touch-icon-60x60.png?v=3">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-touch-icon-72x72.png?v=3">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-touch-icon-76x76.png?v=3">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-touch-icon-114x114.png?v=3">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-touch-icon-120x120.png?v=3">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-touch-icon-144x144.png?v=3">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-touch-icon-152x152.png?v=3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon-180x180.png?v=3">
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-32x32.png?v=3" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/favicons/android-chrome-192x192.png?v=3" sizes="192x192">
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png?v=3" sizes="96x96">
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-16x16.png?v=3" sizes="16x16">
+  <link rel="manifest" href="/assets/favicons/manifest.json?v=3">
+  <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg?v=3" color="#5bbad5">
+  <link rel="shortcut icon" href="/assets/favicons/favicon.ico?v=3">
+  <meta name="msapplication-TileColor" content="#222222">
+  <meta name="msapplication-TileImage" content="/assets/favicons/mstile-144x144.png?v=3">
+  <meta name="theme-color" content="#ffffff">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header mdl-layout--fixed-header mdl-layout__header--waterfall mdl-color--white">
+      <div class="mdl-layout__header-row">
+        <div class="mdl-layout__drawer-button"><i class="material-icons mdl-color-text--blue-grey-800">menu</i></div>
+        <!-- Title -->
+        <span class="mdl-layout-title hide-title-onmobile">
+          <%= link_to root_path do %>
+            <img src="/assets/optimised.svg" alt="logo" class="mdl-logo logo--size-38"/>
+            <span class="mdl-color-text--grey-800 logo-name">James<span class="mdl-color-text--red-500">:potz</span></span>
+          <% end %>
+        </span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
+        <div class="navigation-hide-for-mobile">
+          <nav class="mdl-navigation">
+            <%= link_to "Home", root_path, class: "mdl-navigation__link mdl-color-text--grey-500" %>
+            <a class="mdl-navigation__link mdl-color-text--black" href="#about">About</a>
+            <a class="mdl-navigation__link mdl-color-text--grey-500" href="#work">Work</a>
+            <a class="mdl-navigation__link mdl-color-text--grey-500" href="#contact">Contact</a>
+            <%= link_to "Blog", posts_path, class: "mdl-navigation__link mdl-color-text--grey-500" %>
+          </nav>
+        </div>
+      </div>
+      <span class="mobile-title mdl-layout-title">
+        <img src="/assets/optimised.svg" alt="logo" class="logo--size-38"/>
+        <span class="mdl-color-text--grey-800 logo-name">James<span class="mdl-color-text--red-500">:potz</span></span>
+      </span>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="logo-sidebar__container">
+        <img src="/assets/optimised.svg" alt="logo" class="logo--size-38"/>
+        <span class="mdl-color-text--grey-800 logo-name">James<span class="mdl-color-text--red-500">:potz</span></span>
+      </span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="#about">About</a>
+        <a class="mdl-navigation__link" href="">Work</a>
+        <a class="mdl-navigation__link" href="">Contact</a>
+        <div class="mdl-layout-spacer">
+        </div>
+        <a class="mdl-navigation__link" href="">Download </a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <%= yield %>
+      <footer class="mdl-mini-footer mdl-color--black">
+        <div class="mdl-mini-footer__left-section">
+          <div class="mdl-logo">
+            <img src="/assets/optimised.svg" alt="logo" class="mdl-logo logo--size-24"/>&nbsp;
+            <span class="mdl-color-text--grey-50">James<span class="mdl-color-text--grey-500">:potz</span></span>
+          </div>
+          <ul class="mdl-mini-footer__link-list">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>

@@ -1,0 +1,14 @@
+<div class="blog--section bg-blog">
+  <h1 class="default-font heading-text mdl-typography--text-center mdl-color-text--white">Blog</h1>
+</div>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col">
+    <div class="read--me">
+        <% @posts.each do |post| %>
+          <h3><%= post.title.titleize %></h3>
+          <span class="date"><%= post.created_at.strftime("%B %d, %Y")%></span><br>
+          <%= post.body %>
+        <% end %>
+    </div>
+  </div>
+</div>

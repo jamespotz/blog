@@ -1,0 +1,5 @@
+<div class="read--me">
+  <h1><%= @post.title.titleize %></h1>
+  <h6><%= time_ago_in_words(@post.created_at) %> ago.</h6>
+  <%= @post.body %>
+</div>
