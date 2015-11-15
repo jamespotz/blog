@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :home
+  get "/download-resume" => "home#download_resume"
+  post '/send-mail' => 'home#send_mail'
   root 'home#index'
 end

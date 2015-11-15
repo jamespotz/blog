@@ -15,6 +15,7 @@
  */
 
  @import 'material';
+ .scale.triggeredCSS3     {transform : scale(1.6); }
  .mdl-layout__drawer .mdl-layout-spacer{
    height: 100%;
  }
@@ -231,11 +232,15 @@
  }
 
 .icon-twitter, .icon-github,
-.icon-facebook, .icon-linkedin{
+.icon-facebook, .icon-linkedin,
+.material-icons.mail{
   color: #757575;
   &:hover{
       color: #ffffff;
   }
+}
+.material-icons.md-14{
+  font-size: 14px;
 }
  @media screen and (max-width: 900px){
    .mobile-title {

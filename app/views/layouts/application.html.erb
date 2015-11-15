@@ -26,6 +26,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link rel="stylesheet" href="/assets/material.min.css.map" media="screen" title="no title" charset="utf-8">
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:300,400' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
   <style>
@@ -98,12 +99,30 @@
             <li class="mdl-icon"><a href="https://twitter.com/JamesRobertRook"><i class="icon-twitter"></i></a></li>
             <li class="mdl-icon"><a href="https://www.linkedin.com/profile/view?id=AAMAABAVpe8BP3DxmlAd0cCdUOBFwGTlULwf6dY&trk=hp-identity-name"><i class="icon-linkedin"></i></a></li>
             <li class="mdl-icon"><a href="https://github.com/xFatal23"><i class="icon-github"></i></a></li>
+            <li class="mdl-icon"><a href="mailto:thepoltergeist23@gmail.com"><i class="material-icons mail md-14">mail</i></a></li>
           </ul>
         </div>
       </footer>
     </main>
   </div>
-  <!--Js Files-->
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
+<!--Js Files-->
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<script type="text/javascript">
+  angular.module("mySkills", ["chart.js"]).config(['ChartJsProvider', function (ChartJsProvider) {
+      // Configure all charts
+      ChartJsProvider.setOptions({
+        colours: ['#F7464A', '#46BFBD','#FDB45C'],
+        responsive: true,
+        scaleShowLabelBackdrop : true,
+        scaleShowLine : true,
+        segmentShowStroke : true,
+        segmentStrokeColor : "#757575",
+        animationEasing : "easeOutBounce",
+      });
+    }]).controller("DoughnutCtrl", function ($scope) {
+      $scope.labels = ["Ruby On Raisl", "CSS/HTML", "jQuery"];
+      $scope.data = [400, 400, 200];
+  });
+</script>
 </html>

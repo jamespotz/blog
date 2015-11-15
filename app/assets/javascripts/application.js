@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require angular.min
+//= require Chart.min
+//= require angular-chart.min
+//= require material.min
 //= require turbolinks
 //= require_tree .
