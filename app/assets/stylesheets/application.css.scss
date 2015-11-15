@@ -30,7 +30,6 @@
  }
  .work--section,
  .slogan-section,
- .contact--section,
  .post--section{
    padding: 250px 0;
  }
@@ -39,6 +38,9 @@
  }
  .about-me--section, .blog--section{
    padding: 150px 0;
+ }
+ .contact--section{
+   padding: 70px 0;
  }
  .heading-text{
    font-size: 60px;
@@ -107,7 +109,7 @@
    color: #fff;
  }
  .bg-contact {
-   background: url('/assets/blurred_contact_bg.jpg') center / cover;
+   background: url('/assets/contact-bg.jpg') center / cover;
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
