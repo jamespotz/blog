@@ -1,0 +1,28 @@
+<%= simple_form_for @post do |f| %>
+  <% if @post.errors.any? %>
+    <div class="alert-danger">
+      <h4><%= pluralize(@post.errors.count, "error") %> prevented this post from saving.</h4>
+      <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--12-col" >
+    <%= f.label :title, class: "mdl-textfield__label mdl-color-text--grey-500" %>
+    <%= f.input_field :title, class: "mdl-textfield__input", required: false %>
+    <span class="mdl-textfield__error">Letters and spaces only</span>
+  </div><br>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--12-col" >
+    <%= f.label :body, class: "mdl-textfield__label mdl-color-text--grey-500" %>
+    <%= f.text_area :body, class: "mdl-textfield__input", rows: 15 %>
+    <span class="mdl-textfield__error">Letters and spaces only</span>
+  </div><br>
+  <%= link_to posts_path, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-ripple--center" do %>
+      <i class="material-icons">&#xE5C4;</i> Back
+  <% end %>
+  <%= f.button :button, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-ripple--center mdl-color--blue-700 mdl-color-text--white" do %>
+      Post <i class="material-icons">&#xE5C8;</i>
+  <% end %>
+<% end %>

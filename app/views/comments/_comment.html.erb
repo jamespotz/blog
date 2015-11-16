@@ -1,0 +1,11 @@
+<div class="comment--section">
+    <hr>
+    <p class="mdl-typography--title"><%= comment.name %></p>
+    <p class="mdl-typography--body-1"><%= comment.body %></p>
+    <p class="mdl-typography--caption mdl-color-text--grey-400"><%= time_ago_in_words(comment.created_at) %> Ago.</p>
+    <% if user_signed_in? %>
+      <%= link_to 'Delete', [comment.post, comment], method: :delete, class: 'mdl-button mdl-js-button
+                mdl-js-ripple-effect mdl-ripple--center comment-btn
+                mdl-color-text--grey-700', data: { confirm: 'Are you sure?' } %>
+    <% end %>
+</div>

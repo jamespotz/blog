@@ -1,0 +1,24 @@
+<div class="login--section">
+  <div class="read--me">
+    <h2>Log in</h2>
+
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--12-col" >
+        <%= f.input :email, input_html: { class: 'mdl-textfield__input' }, label_html: { class: "mdl-textfield__label mdl-color-text--grey-500" }, required: false, autofocus: true %>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--12-col" >
+        <%= f.input :password, input_html: { class: 'mdl-textfield__input' }, label_html: { class: "mdl-textfield__label mdl-color-text--grey-500" }, required: false %>
+      </div>
+      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="user_remember_me">
+        <input name="user[remember_me]" type="hidden" value="0">
+        <input class="boolean optional mdl-checkbox__input" id="user_remember_me" name="user[remember_me]" type="checkbox" value="1">
+        <span class="mdl-checkbox__label">Remember me.</span>
+      </label><br><br>
+      <div class="form-actions">
+        <%= f.button :submit, "Log in", class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-ripple--center" %>
+      </div>
+    <% end %><br>
+
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

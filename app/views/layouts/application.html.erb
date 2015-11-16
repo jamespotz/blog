@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>James:potz | Web Developer, Web Designer</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-touch-icon-57x57.png?v=3">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-touch-icon-60x60.png?v=3">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-touch-icon-72x72.png?v=3">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-touch-icon-76x76.png?v=3">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-touch-icon-114x114.png?v=3">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-touch-icon-120x120.png?v=3">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-touch-icon-144x144.png?v=3">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-touch-icon-152x152.png?v=3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon-180x180.png?v=3">
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-32x32.png?v=3" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/favicons/android-chrome-192x192.png?v=3" sizes="192x192">
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png?v=3" sizes="96x96">
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-16x16.png?v=3" sizes="16x16">
+  <link rel="manifest" href="/assets/favicons/manifest.json?v=3">
+  <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg?v=3" color="#5bbad5">
+  <link rel="shortcut icon" href="/assets/favicons/favicon.ico?v=3">
+  <meta name="msapplication-TileColor" content="#222222">
+  <meta name="msapplication-TileImage" content="/assets/favicons/mstile-144x144.png?v=3">
+  <meta name="theme-color" content="#ffffff">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/material-design-lite/1.0.6/material.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:300,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/angular.chartjs/0.8.5/angular-chart.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <style>
+    [data-sr] {
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header mdl-color--white">
+      <div class="mdl-layout__header-row">
+        <div class="mdl-layout__drawer-button"><i class="material-icons mdl-color-text--blue-grey-800">menu</i></div>
+        <!-- Title -->
+        <span class="mdl-layout-title hide-title-onmobile">
+          <%= link_to root_path do %>
+            <img src="/assets/optimised.svg" alt="logo" class="mdl-logo logo--size-38"/>
+            <span class="mdl-color-text--grey-800 logo-name">James<span class="mdl-color-text--red-500">:potz</span></span>
+          <% end %>
+        </span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
+        <div class="navigation-hide-for-mobile">
+          <nav class="mdl-navigation">
+            <%= link_to "Home", root_path, class: "mdl-navigation__link mdl-color-text--black" %>
+            <a class="mdl-navigation__link mdl-color-text--black" href="#about">About</a>
+            <a class="mdl-navigation__link mdl-color-text--black" href="#contact">Contact</a>
+            <%= link_to "Blog", posts_path, class: "mdl-navigation__link mdl-color-text--black" %>
+            <% if user_signed_in? %>
+              | <%= link_to "New Post", new_post_path, class: "mdl-navigation__link mdl-color-text--black" %>
+              | <%= link_to'Logout', destroy_user_session_path, :method => :delete, class: "mdl-navigation__link mdl-color-text--black" %>
+            <% end %>
+          </nav>
+        </div>
+      </div>
+      <span class="mobile-title mdl-layout-title">
+        <img src="/assets/optimised.svg" alt="logo" class="logo--size-38"/>
+        <span class="mdl-color-text--grey-800 logo-name">James<span class="mdl-color-text--red-500">:potz</span></span>
+      </span>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="logo-sidebar__container">
+        <img src="/assets/optimised.svg" alt="logo" class="logo--size-38"/>
+        <span class="mdl-color-text--grey-800 logo-name">James<span class="mdl-color-text--red-500">:potz</span></span>
+      </span>
+      <nav class="mdl-navigation">
+        <%= link_to "Home", root_path, class: "mdl-navigation__link mdl-color-text--black" %>
+        <a class="mdl-navigation__link mdl-color-text--black" href="#about">About</a>
+        <a class="mdl-navigation__link mdl-color-text--black" href="#contact">Contact</a>
+        <%= link_to "Blog", posts_path, class: "mdl-navigation__link mdl-color-text--black" %>
+        <% if user_signed_in? %>
+          | <%= link_to "New Post", new_post_path, class: "mdl-navigation__link mdl-color-text--black" %>
+          | <%= link_to'Logout', destroy_user_session_path, :method => :delete, class: "mdl-navigation__link mdl-color-text--black" %>
+        <% end %>
+        <div class="mdl-layout-spacer">
+        </div>
+        <a class="mdl-navigation__link" href="">Download </a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <div class="mdl-grid mdl-grid--no-spacing">
+        <%= yield %>
+      </div>
+      <footer class="mdl-mini-footer mdl-color--black">
+        <div class="mdl-mini-footer__left-section">
+          <div class="mdl-logo mdl-color-text--grey-600">&copy; 2015 James:potz</div>
+        </div>
+        <div class="mdl-mini-footer__right-section">
+          <ul class="mdl-mini-footer__link-list">
+            <li class="mdl-icon"><a href="https://www.facebook.com/james.l.rooke"><i class="icon-facebook"></i></a></li>
+            <li class="mdl-icon"><a href="https://twitter.com/JamesRobertRook"><i class="icon-twitter"></i></a></li>
+            <li class="mdl-icon"><a href="https://www.linkedin.com/profile/view?id=AAMAABAVpe8BP3DxmlAd0cCdUOBFwGTlULwf6dY&trk=hp-identity-name"><i class="icon-linkedin"></i></a></li>
+            <li class="mdl-icon"><a href="https://github.com/xFatal23"><i class="icon-github"></i></a></li>
+            <li class="mdl-icon"><a href="mailto:thepoltergeist23@gmail.com"><i class="material-icons mail md-14">mail</i></a></li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+  </div>
+</body>
+<!--Js Files-->
+<script src="https://cdn.jsdelivr.net/material-design-lite/1.0.6/material.min.js"></script>
+<script src="https://cdn.jsdelivr.net/angularjs/1.4.7/angular.min.js"></script>
+<script src="https://cdn.jsdelivr.net/angularjs/1.4.7/angular-animate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/angular.chartjs/0.8.5/angular-chart.min.js"></script>
+<%= javascript_include_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
+</html>

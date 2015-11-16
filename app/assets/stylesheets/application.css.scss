@@ -1,0 +1,288 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import 'material';
+ .padding-top-bottom--250{
+   padding: 250px 0;
+ }
+ .padding-top-bottom--150{
+   padding: 150px 0;
+ }
+ .scale.triggeredCSS3     {transform : scale(1.6); }
+ .mdl-layout__drawer .mdl-layout-spacer{
+   height: 100%;
+ }
+
+ .material-icons.whiteFFF{
+   color: white;
+ }
+ .about-me--section, .slogan-section, .work--section, .contact--section, .blog--section, .post--section, .login--section{
+     position: relative;
+     width: 100%;
+     height: auto;
+ }
+ .work--section,
+ .slogan-section,
+ .post--section{
+   padding: 250px 0;
+ }
+ .login--section{
+   padding: 100px 0 370px;
+ }
+ .about-me--section, .blog--section{
+   padding: 150px 0;
+ }
+ .contact--section{
+   padding: 70px 0;
+ }
+ .heading-text{
+   font-size: 60px;
+ }
+ .default-font{
+   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+   line-height: 1;
+   color: #767777;
+   font-weight: 500;
+ }
+ .lowercase{
+   text-transform: lowercase;
+ }
+ .center-download-btn{
+   width: auto;
+   height: auto;
+   display: block;
+   margin: 0 auto;
+ }
+ .btn-resume-download{
+   padding-top: 30px;
+ }
+ .mobile-title {
+   display: none;
+ }
+ .dark-bg {
+   background: url('/assets/dark-bg.jpg') center / cover;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
+ .bg-blog {
+   background: url('/assets/blog-blurred.jpg') center / cover;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
+ /* hide burger navigation */
+ .mdl-layout__header .mdl-layout__drawer-button{
+   display: none;
+ }
+ .read--me{
+   width: 100%;
+   max-width: 640px;
+   margin: 0 auto;
+ }
+ .text-spacer{
+   display: block;
+   padding-top: 50px;
+ }
+
+ /* card */
+ .card-wide.mdl-card {
+   width: 100%;
+   max-width: 640px;
+   margin: 0 auto;
+ }
+ .card-wide > .mdl-card__title {
+   color: #fff;
+   height: 176px;
+   background: url('/assets/google-chrome-paramountdirect.png') center / cover;
+ }
+ .card-wide > .mdl-card__menu {
+   color: #fff;
+ }
+ .bg-contact {
+   background: url('/assets/contact-bg.jpg') center / cover;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
+ .lead{
+   padding-left: 15px;
+ }
+ .center--form{
+   display: block;
+   width: 90%;
+   padding: 0 5%;
+ }
+ .form--heading{
+   height: 100px;
+   width: 100%;
+   background: #263238;
+   color: white;
+   line-height: 150%;
+   border-radius: 3px 3px 0 0;
+   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+ }
+ .form--fullwidth{
+   width: 100%;
+ }
+ .form--field{
+   border-radius: 3px;
+   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12)
+ }
+ svg.logo--size-38, img.logo--size-38 {
+    width: 38px;
+    height: auto;
+  }
+ svg.logo--size-64, img.logo--size-64{
+   width: 64px;
+   height: auto;
+ }
+ svg.logo--size-24, img.logo--size-24{
+   width: 24px;
+   height: auto;
+ }
+ .james-logo-bg{
+   fill: #fff!important;
+ }
+ .james-logo-text{
+   fill: #212121!important;
+ }
+ .logo-name{
+   padding-top: 7px;
+   display: inline-block;
+ }
+ .logo-sidebar__container{
+   border-bottom: 1px solid #ddd;
+   position: relative;
+   span.logo-title{
+     display: inline-block;
+     position: absolute;
+     top: 24px;
+   }
+   img{
+     padding: 16px;
+   }
+ }
+ .comment--section{
+    position: relative;
+     p {
+       padding-left: 25px;
+     }
+     .comment-btn{
+       display: inline-block;
+       position: absolute;
+       top: 5px;
+       right: 5px;
+     }
+ }
+ .material-icons.iconImage{
+   font-size: 14px;
+ }
+ .login-form {
+   width: 960px;
+   margin: 0 auto;
+   display: block;
+ }
+
+ /* icons */
+ @font-face {
+ 	font-family: 'icomoon';
+ 	src:font-url('icomoon.eot?kxb46m');
+ 	src:font-url('icomoon.eot?kxb46m#iefix') format('embedded-opentype'),
+ 		font-url('icomoon.ttf?kxb46m') format('truetype'),
+ 		font-url('icomoon.woff?kxb46m') format('woff'),
+ 		font-url('icomoon.svg?kxb46m#icomoon') format('svg');
+ 	font-weight: normal;
+ 	font-style: normal;
+ }
+
+ [class^="icon-"], [class*=" icon-"] {
+ 	font-family: 'icomoon';
+ 	speak: none;
+ 	font-style: normal;
+ 	font-weight: normal;
+ 	font-variant: normal;
+ 	text-transform: none;
+ 	line-height: 1;
+
+ 	/* Better Font Rendering =========== */
+ 	-webkit-font-smoothing: antialiased;
+ 	-moz-osx-font-smoothing: grayscale;
+ }
+
+ .icon-github:before {
+ 	content: "\e900";
+ }
+ .icon-linkedin:before {
+ 	content: "\e901";
+ }
+ .icon-facebook:before {
+ 	content: "\e902";
+ }
+ .icon-twitter:before {
+ 	content: "\e903";
+ }
+
+.icon-twitter, .icon-github,
+.icon-facebook, .icon-linkedin,
+.material-icons.mail{
+  color: #757575;
+  &:hover{
+      color: #ffffff;
+  }
+}
+.material-icons.md-14{
+  font-size: 14px;
+}
+ @media screen and (max-width: 900px){
+   .mobile-title {
+     display: block !important;
+     position: absolute;
+     left: calc(50% - 70px);
+     top: 8px;
+     -webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+     transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+   }
+   .navigation-hide-for-mobile, .hide-title-onmobile{
+     display: none;
+   }
+   .mdl-layout__header .mdl-layout__drawer-button{
+     display: block;
+   }
+   img.logo--size{
+     padding-top: 17.5px;
+   }
+ }
+ @media screen and (max-width: 420px){
+   .about-me--section, .slogan-section, .work--section, .contact--section, .blog--section, .post--section, .login--section{
+     padding: 30px 0px;
+     h1{
+       font-size: 21px!important;
+     }
+     h6{
+       font-size: 16px!important;
+     }
+     p{
+       font-size: 12px!important;
+     }
+   }
+   .read--me{
+     width: 250px!important;
+   }
+ }
