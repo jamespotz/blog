@@ -43,11 +43,11 @@ gem 'simple_form'
 
 gem 'devise', '~> 3.5.2'
 
-#gem 'puma'
+gem 'puma'
 
 group :production do
-  #gem 'rails_12factor'
+  gem 'rails_12factor'
 end
 
-#gem 'heroku'
-#ruby "2.1.5"
+gem 'heroku'
+ruby "2.1.5"
