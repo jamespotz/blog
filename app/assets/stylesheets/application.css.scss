@@ -15,6 +15,23 @@
  */
 
  @import 'material';
+ div{
+   -webkit-animation-delay: 200ms; /* Chrome, Safari, Opera */
+   animation-delay: 200ms;
+ }
+ .hidden{
+   opacity: 0;
+ }
+ header{
+   -webkit-animation-delay: 200ms; /* Chrome, Safari, Opera */
+   animation-delay: 200ms;
+ }
+ header.nav-scrolled,{
+     position: fixed;
+     width: 100%;
+     box-shadow: 0 2px 3px rgba(0,0,0,.4);
+     z-index: 150;
+ }
  .padding-top-bottom--250{
    padding: 250px 0;
  }

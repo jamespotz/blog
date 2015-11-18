@@ -1,0 +1,27 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square70x70logo src="/mstile-70x70.png?v=3"/>
+      <square150x150logo src="/mstile-150x150.png?v=3"/>
+      <square310x310logo src="/mstile-310x310.png?v=3"/>
+      <wide310x150logo src="/mstile-310x150.png?v=3"/>
+      <TileColor>#222222</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square70x70logo src="/mstile-70x70.png?v=3"/>
+      <square150x150logo src="/mstile-150x150.png?v=3"/>
+      <square310x310logo src="/mstile-310x310.png?v=3"/>
+      <wide310x150logo src="/mstile-310x150.png?v=3"/>
+      <TileColor>#222222</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>
+>>>>>>> 5bd3fb0b3c2148054b2e322915d6769fb4f20fb9
