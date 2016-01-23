@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>James:potz | Web Developer, Web Designer</title>
+  <title>James:potz | Ruby on Rails Developer, Web Developer</title>
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-touch-icon-57x57.png?v=3">
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-touch-icon-60x60.png?v=3">
   <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-touch-icon-72x72.png?v=3">
@@ -54,9 +54,13 @@
         <!-- Navigation -->
         <div class="navigation-hide-for-mobile">
           <nav class="mdl-navigation">
-            <a class="mdl-navigation__link mdl-color-text--black scroll" href="#top">Home</a>
-            <a class="mdl-navigation__link mdl-color-text--black scroll" href="#about" id="btn-about">About</a>
-            <a class="mdl-navigation__link mdl-color-text--black scroll" href="#contact">Contact</a>
+            <% if request.fullpath.gsub('/', '').downcase != 'posts' %>
+              <a class="mdl-navigation__link mdl-color-text--black scroll" href="#top">Home</a>
+              <a class="mdl-navigation__link mdl-color-text--black scroll" href="#about" id="btn-about">About</a>
+              <a class="mdl-navigation__link mdl-color-text--black scroll" href="#contact">Contact</a>
+            <% else %>
+                <%= link_to "Home", root_path, class: "mdl-navigation__link mdl-color-text--black" %>
+            <% end %>
             <%= link_to "Blog", posts_path, class: "mdl-navigation__link mdl-color-text--black" %>
             <% if user_signed_in? %>
               | <%= link_to "New Post", new_post_path, class: "mdl-navigation__link mdl-color-text--black" %>
@@ -102,7 +106,7 @@
             <li class="mdl-icon"><a href="https://www.facebook.com/james.l.rooke"><i class="icon-facebook"></i></a></li>
             <li class="mdl-icon"><a href="https://twitter.com/JamesRobertRook"><i class="icon-twitter"></i></a></li>
             <li class="mdl-icon"><a href="https://ph.linkedin.com/in/jamesrobertrooke"><i class="icon-linkedin"></i></a></li>
-            <li class="mdl-icon"><a href="https://github.com/xFatal23"><i class="icon-github"></i></a></li>
+            <li class="mdl-icon"><a href="https://github.com/jamespot"><i class="icon-github"></i></a></li>
             <li class="mdl-icon"><a href="mailto:thepoltergeist23@gmail.com"><i class="material-icons mail md-14">mail</i></a></li>
           </ul>
         </div>

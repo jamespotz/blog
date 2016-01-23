@@ -15,6 +15,10 @@
  */
 
  @import 'material';
+
+ .post-body{
+   word-wrap: break-word;
+ }
  div{
    -webkit-animation-delay: 200ms; /* Chrome, Safari, Opera */
    animation-delay: 200ms;

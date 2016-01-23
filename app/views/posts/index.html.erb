@@ -5,9 +5,11 @@
   <div class="mdl-cell mdl-cell--12-col">
     <div class="read--me">
         <% @posts.each do |post| %>
-          <h3><%= post.title.titleize %></h3>
+          <%= link_to post_path(post.id) do %>
+            <h3><%= post.title.titleize %></h3>
+          <% end %>
           <span class="date"><%= post.created_at.strftime("%B %d, %Y")%></span><br>
-          <%= post.body %>
+          <p class="mdl-typography--body-2 post-body"><%= post.body %></p>
         <% end %>
     </div>
   </div>
