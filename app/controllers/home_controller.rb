@@ -3,10 +3,10 @@ class HomeController < ApplicationController
   end
 
   def download_resume
-    doc = "#{Rails.root}/bin/Resume.docx"
+    doc = "#{Rails.root}/bin/resume.pdf"
     send_data doc,
-      :filename => "james_robert_rooke--resume.docx",
-      :type => 'application/docs'
+      :filename => "james_robert_rooke--resume.pdf",
+      :type => 'application/pdf'
   end
 
   def send_mail
