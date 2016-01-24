@@ -16,7 +16,7 @@
   </div><br>
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--12-col" >
     <%= f.label :body, class: "mdl-textfield__label mdl-color-text--grey-500" %>
-    <%= f.text_area :body, class: "mdl-textfield__input", rows: 15 %>
+    <%= f.text_area :body, class: "mdl-textfield__input edit", rows: 15 %>
     <span class="mdl-textfield__error">Letters and spaces only</span>
   </div><br>
   <%= link_to posts_path, class: "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-ripple--center" do %>
@@ -26,3 +26,9 @@
       Post <i class="material-icons">&#xE5C8;</i>
   <% end %>
 <% end %>
+
+<script type="text/javascript">
+  $(function() {
+    $('.edit').froalaEditor()
+  });
+</script>

@@ -49,7 +49,7 @@ gem 'puma'
 gem 'paperclip', git: 'git://github.com/thoughtbot/paperclip.git'
 
 #wysiwyg functionality
-gem 'redactor-rails'
+gem 'wysiwyg-rails'
 
 group :production do
   gem 'rails_12factor'

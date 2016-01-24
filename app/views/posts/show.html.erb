@@ -12,7 +12,7 @@
         | <%= link_to 'Delete', post_path(@post), method: :delete, class: 'mdl-navigation__link mdl-color-text--black' %>
       <% end %>
     </h6>
-    <p class="mdl-typography--body-1 post-body"><%= @post.body %></p>
+    <p class="mdl-typography--body-1 post-body"><%= @post.body.html_safe %></p>
 
     <div class="comments">
       <h4><%= @post.comments.count %> Comments</h4>
