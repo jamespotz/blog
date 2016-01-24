@@ -45,6 +45,12 @@ gem 'devise', '~> 3.5.2'
 
 gem 'puma'
 
+# for uploading images
+gem 'paperclip', git: 'git://github.com/thoughtbot/paperclip.git'
+
+#wysiwyg functionality
+gem 'redactor-rails'
+
 group :production do
   gem 'rails_12factor'
 end
